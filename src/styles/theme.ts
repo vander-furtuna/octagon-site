@@ -1,6 +1,7 @@
 const palette = {
   white: '#fff',
   black: '#000',
+  primary_100: '#FFD363',
   primary_300: '#F4B148',
   primary_500: '#C78814',
   primary_700: '#FF7701',
@@ -20,12 +21,20 @@ export const Theme = {
     underline: palette.primary_700,
   },
   text: {
-    color: palette.white,
+    light: palette.white,
+    bold: palette.gray900,
+    primary: palette.primary_300,
+  },
+  nav_items: {
+    color: palette.primary_300,
+    hover: palette.primary_500,
+    underline: palette.primary_700,
   },
   background: {
     light: palette.gray700,
     bold: palette.gray900,
     primary: palette.primary_300,
+    primary_hover: palette.primary_100,
   },
   outline: {
     primary: palette.primary_300,
