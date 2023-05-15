@@ -1,6 +1,7 @@
-import { Banner } from '../Banner';
-import { OurServices } from '../OurServices';
-import { Sidebar } from '../Sidebar';
+import { Banner } from "../Banner";
+import { CommonQuestions } from "../CommonQuestions";
+import { OurServices } from "../OurServices";
+import { Sidebar } from "../Sidebar";
 
 export function Home() {
   return (
@@ -8,6 +9,7 @@ export function Home() {
       <Sidebar />
       <Banner />
       <OurServices />
+      <CommonQuestions />
     </>
   );
 }
