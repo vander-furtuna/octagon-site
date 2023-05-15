@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const OurServicesContainer = styled.section`
   width: 100%;
@@ -17,6 +17,15 @@ export const OurServicesContainer = styled.section`
   }
 `;
 
+export const ServicesContent = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+`;
+
 export const ServicesIconsContainer = styled.div`
   width: 100%;
   padding: 2rem 0;
@@ -25,4 +34,13 @@ export const ServicesIconsContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+`;
+
+export const ServicesCardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2.5rem;
 `;
