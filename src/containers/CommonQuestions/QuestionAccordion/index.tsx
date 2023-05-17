@@ -1,6 +1,6 @@
 import { ICommonQuestion } from '@/dtos/ICommonQuestion';
 import { AccodionHeader, AccordionContainer, AccordionContent } from './styles';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { CaretDown } from '@phosphor-icons/react';
 
 interface IQuestionAccordion {

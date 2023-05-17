@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const TitleContainer = styled.h1`
+export const TitleContainer = styled(motion.h1)`
   font-size: 2rem;
   color: ${({ theme }) => theme.title.color};
   position: relative;
@@ -24,4 +25,19 @@ export const TitleContainer = styled.h1`
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
   }
+`;
+
+export const Character = styled(motion.span)`
+  display: inline-block;
+  margin-right: 0.05rem;
+`;
+
+export const Word = styled(motion.div)`
+  & + span {
+    margin-left: 0.35rem;
+  }
+  display: inline-block;
+  line-height: 1.2;
+
+  white-space: nowrap;
 `;
