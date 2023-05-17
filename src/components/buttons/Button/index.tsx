@@ -1,5 +1,5 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
-import { ButtonContainer } from "./styles";
+import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonContainer } from './styles';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export function Button({ children, href, ...rest }: IButtonProps) {
   return (
     <ButtonContainer {...rest}>
-      <a href={href ? href : "#"}>{children}</a>
+      <a href={href ? href : '#'}>{children}</a>
     </ButtonContainer>
   );
 }
