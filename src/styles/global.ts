@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -6,7 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    behavior: smooth !important;
+    scroll-behavior: smooth;
+
   }
 
   html {

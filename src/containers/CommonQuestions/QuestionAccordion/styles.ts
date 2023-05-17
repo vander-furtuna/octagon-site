@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface IAccordion {
   isOpen: boolean;
@@ -10,10 +10,13 @@ export const AccordionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const AccodionHeader = styled.div<IAccordion>`
   width: 100%;
+  transition: all 0.3s ease-in-out;
+
   height: 3.5rem;
   border-radius: 0.5rem;
   background: ${({ isOpen, theme }) =>
@@ -26,17 +29,32 @@ export const AccodionHeader = styled.div<IAccordion>`
 
   span {
     font-weight: 600;
-    color: ${({ theme }) => theme.text.primary};
+    color: ${({ isOpen, theme }) =>
+      isOpen ? theme.text.bold : theme.text.primary};
+    transition: all 0.3s ease-in-out;
   }
   svg {
-    color: ${({ theme }) => theme.text.primary};
+    transition: all 0.3s ease-in-out;
+
+    color: ${({ isOpen, theme }) =>
+      isOpen ? theme.text.bold : theme.text.primary};
+
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
   }
 `;
 
 export const AccordionContent = styled.main<IAccordion>`
-  padding: ${({ isOpen }) => (isOpen ? "2rem" : "0")};
-  max-height: ${({ isOpen }) => (isOpen ? "20rem" : "0rem")};
+  transition: all 0.3s ease-in-out;
+
+  padding: ${({ isOpen }) => (isOpen ? '2rem' : '0')};
+  max-height: ${({ isOpen }) => (isOpen ? '20rem' : '0rem')};
   background: ${({ theme }) => theme.background.light};
   border-radius: 0.5rem;
   overflow: hidden;
+
+  span {
+    transition: all 0.3s ease;
+    color: ${({ theme }) => theme.text.light};
+    opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+  }
 `;

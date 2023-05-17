@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const QuestionsContainer = styled.section`
   width: 100%;
@@ -14,6 +14,8 @@ export const QuestionsContainer = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    padding: 2rem 0 4rem 0;
   }
 `;
 
