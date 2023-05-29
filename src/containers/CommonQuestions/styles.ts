@@ -17,6 +17,10 @@ export const QuestionsContainer = styled.section`
 
     padding: 2rem 0 4rem 0;
   }
+
+  @media screen and (max-width: 850px) {
+    padding: 2rem;
+  }
 `;
 
 export const QuestionAccordionsContainer = styled.div`

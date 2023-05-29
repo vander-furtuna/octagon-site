@@ -19,6 +19,15 @@ export const AboutUsContainer = styled.section`
   .informations {
     display: flex;
   }
+
+  @media screen and (max-width: 750px) {
+    .informations {
+      flex-direction: column-reverse;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    padding: 2rem;
+  }
 `;
 
 export const AboutUsContent = styled.article`
@@ -46,6 +55,8 @@ export const AboutUsContent = styled.article`
 
 export const AboutUsLogoContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-height: 100%;
   position: relative;
@@ -57,5 +68,17 @@ export const AboutUsLogoContainer = styled.div`
     height: 27.5rem;
     width: auto;
     position: absolute;
+  }
+
+  @media screen and (max-width: 750px) {
+    svg {
+      position: relative;
+      transform: translateY(0);
+      right: 0;
+      width: 17.5rem;
+      height: auto;
+
+      margin-bottom: 4rem;
+    }
   }
 `;
