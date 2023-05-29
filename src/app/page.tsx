@@ -3,7 +3,7 @@
 import RootLayout from './layout';
 import type { Metadata } from 'next';
 
-import { Home } from '@/containers/Home';
+import { Home } from '../containers/Home';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
