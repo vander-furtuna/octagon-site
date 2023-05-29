@@ -27,4 +27,26 @@ export const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     font-family: 'Montserrat', sans-serif;
   }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ${({ theme }) => theme.background.bold};
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.background.primary};
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: ${({ theme }) => theme.background.primary_hover};
+}
 `;
