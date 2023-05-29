@@ -1,7 +1,8 @@
-import { Banner } from "../Banner";
-import { CommonQuestions } from "../CommonQuestions";
-import { OurServices } from "../OurServices";
-import { Sidebar } from "../Sidebar";
+import { AboutUs } from '../AboutUs';
+import { Banner } from '../Banner';
+import { CommonQuestions } from '../CommonQuestions';
+import { OurServices } from '../OurServices';
+import { Sidebar } from '../Sidebar';
 
 export function Home() {
   return (
@@ -10,6 +11,7 @@ export function Home() {
       <Banner />
       <OurServices />
       <CommonQuestions />
+      <AboutUs />
     </>
   );
 }

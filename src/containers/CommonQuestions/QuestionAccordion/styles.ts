@@ -11,6 +11,10 @@ export const AccordionContainer = styled.div`
   justify-content: center;
   gap: 0.5rem;
   transition: all 0.3s ease-in-out;
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+  }
 `;
 
 export const AccodionHeader = styled.div<IAccordion>`
