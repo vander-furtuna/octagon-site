@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+<img width="100%" alt="BingoJS" src="https://github.com/vander115/octagon-site/assets/101757815/277942ce-19cf-4f10-b9de-da6c17d3cdfd">
+</h1>
 
-## Getting Started
+<h3 align="center">
+  Octagon ⚙️
+</h3>
 
-First, run the development server:
+<p align="center">Transforme ideias em realidade mude o mundo com engenharia</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/vander115/octagon-site?color=%23f4b148">
+  
+  <a href="https://github.com/matheralvs/todo-list/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/vander115/octagon-site?color=%23f4b148">
+  </a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  <a href="https://github.com/matheralvs/todo-list/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/vander115/octagon-site?color=%23f4b148">
+  </a>
+</p>
