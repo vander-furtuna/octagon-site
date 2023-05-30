@@ -5,9 +5,14 @@ import {
   FooterInformations,
   FooterMap,
   FooterNav,
+  SubFooterButton,
+  SubFooterButtons,
   SubFooterContent,
+  SubFooterLogoContainer,
 } from './styles';
 import { NavItems } from '@/data/header/navItems';
+import { VanderSuncatLogo } from '@/assets/images/vander-logo';
+import { CaretUp, GithubLogo, InstagramLogo } from '@phosphor-icons/react';
 
 export function Footer() {
   return (
@@ -34,7 +39,31 @@ export function Footer() {
           </FooterNav>
         </FooterInformations>
       </FooterContent>
-      <SubFooterContent></SubFooterContent>
+      <SubFooterContent>
+        <SubFooterLogoContainer>
+          <span>Desenvolvido por</span>
+          <VanderSuncatLogo />
+        </SubFooterLogoContainer>
+        <SubFooterButtons>
+          <SubFooterButton
+            target="_blank"
+            rel="noreferrer"
+            href="https://instagram.com/vander_suncat?igshid=ZDc4ODBmNjlmNQ=="
+          >
+            <InstagramLogo weight="fill" size={24} />
+          </SubFooterButton>
+          <SubFooterButton
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/vander115"
+          >
+            <GithubLogo weight="fill" size={24} />
+          </SubFooterButton>
+          <SubFooterButton isFill href="#home">
+            <CaretUp weight="bold" size={24} />
+          </SubFooterButton>
+        </SubFooterButtons>
+      </SubFooterContent>
     </FooterContainer>
   );
 }

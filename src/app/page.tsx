@@ -1,5 +1,3 @@
-'use client';
-
 import RootLayout from './layout';
 import type { Metadata } from 'next';
 

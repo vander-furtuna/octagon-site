@@ -1,3 +1,5 @@
+'use client';
+
 import { AboutUs } from '../AboutUs';
 import { Banner } from '../Banner';
 import { CommonQuestions } from '../CommonQuestions';
