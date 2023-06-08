@@ -80,6 +80,8 @@ export const FooterMap = styled.div`
   @media screen and (max-width: 850px) {
     width: 15rem;
   }
+  @media screen and (max-width: 550px) {
+  }
 `;
 
 export const SubFooterContent = styled.div`

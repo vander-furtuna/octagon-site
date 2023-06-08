@@ -67,6 +67,7 @@ export const NavItem = styled(Link)`
 
 export const SidebarToggle = styled.button`
   display: none;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   width: 3rem;
