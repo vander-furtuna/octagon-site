@@ -11,6 +11,9 @@ export const FooterContainer = styled.footer`
   @media screen and (max-width: 700px) {
     height: 30rem;
   }
+  @media screen and (max-width: 550px) {
+    height: 21rem;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -28,7 +31,7 @@ export const FooterContent = styled.div`
   @media screen and (max-width: 900px) {
     padding: 2.5rem;
 
-    svg {
+    #logo {
       width: 8rem;
       height: auto;
     }
@@ -49,7 +52,7 @@ export const FooterInformations = styled.div`
     gap: 2rem;
   }
   @media screen and (max-width: 550px) {
-    flex-direction: column-reverse;
+    display: none;
   }
 `;
 
@@ -80,8 +83,6 @@ export const FooterMap = styled.div`
   @media screen and (max-width: 850px) {
     width: 15rem;
   }
-  @media screen and (max-width: 550px) {
-  }
 `;
 
 export const SubFooterContent = styled.div`
@@ -92,6 +93,10 @@ export const SubFooterContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 600px) {
+    padding: 2rem;
+  }
 `;
 
 export const SubFooterLogoContainer = styled.div`
@@ -108,6 +113,12 @@ export const SubFooterLogoContainer = styled.div`
     height: 2rem;
     width: auto;
   }
+
+  @media screen and (max-width: 500px) {
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const SubFooterButtons = styled.div`
@@ -115,6 +126,12 @@ export const SubFooterButtons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  @media screen and (max-width: 550px) {
+    #top {
+      display: none;
+    }
+  }
 `;
 
 export const SubFooterButton = styled.a<ISubFooterButtonProps>`
@@ -148,5 +165,44 @@ export const SubFooterButton = styled.a<ISubFooterButtonProps>`
       color: ${({ theme, isFill }) =>
         !isFill && theme.background.primary_hover};
     }
+  }
+`;
+
+export const FooterMobileButtonsContainer = styled.div`
+  width: 100%;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media screen and (max-width: 550px) {
+    display: flex;
+  }
+`;
+
+export const FooterMobileButton = styled.a`
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background: ${({ theme }) => theme.background.primary};
+
+  svg {
+    transition: all 0.2s ease-in-out;
+    color: ${({ theme }) => theme.text.bold};
+  }
+
+  &:hover {
+    background: ${({ theme }) => theme.background.primary_hover};
+  }
+  &:active {
+    transform: scale(0.9);
   }
 `;

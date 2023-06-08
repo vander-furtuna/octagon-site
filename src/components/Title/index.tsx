@@ -22,7 +22,7 @@ export function Title({ children }: IAnimatedTextProps) {
       opacity: 1,
       y: `0rem`,
       transition: {
-        duration: 0.5,
+        duration: 1,
         type: 'spring',
       },
     },

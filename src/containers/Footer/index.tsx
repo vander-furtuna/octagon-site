@@ -4,6 +4,8 @@ import {
   FooterContent,
   FooterInformations,
   FooterMap,
+  FooterMobileButton,
+  FooterMobileButtonsContainer,
   FooterNav,
   SubFooterButton,
   SubFooterButtons,
@@ -12,17 +14,26 @@ import {
 } from './styles';
 import { NavItems } from '@/data/header/navItems';
 import { VanderSuncatLogo } from '@/assets/images/vander-logo';
-import { CaretUp, GithubLogo, InstagramLogo } from '@phosphor-icons/react';
+import {
+  CaretUp,
+  GithubLogo,
+  InstagramLogo,
+  List,
+  MapPin,
+} from '@phosphor-icons/react';
+import { useSidebar } from '@/hooks/sidebar';
 
 export function Footer() {
+  const { toggleSidebar } = useSidebar();
+
   return (
     <FooterContainer>
       <FooterContent>
-        <OctagonFooterLogo />
+        <OctagonFooterLogo id="logo" />
         <FooterInformations>
           <FooterMap>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.53090783469!2d-40.35749652583088!3d-3.693565042994241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eac6fb552c0d43%3A0x655948203c72307a!2sUniversidade%20Federal%20do%20Cear%C3%A1%20%E2%80%93%20Campus%20de%20Sobral!5e0!3m2!1spt-PT!2sbr!4v1685369515508!5m2!1spt-PT!2sbr"
+              src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.53090783469!2d-40.35749652583088!3d-3.693565042994241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eac6fb552c0d43%3A0x655948203c72307a!2sUniversidade%20Federal%20do%20Cear%C3%A1%20%E2%80%93%20Campus%20de%20Sobral!5e0!3m2!1spt-PT!2sbr!4v1685369515508!5m2!1spt-PT!2sbr"
               style={{ border: 0, margin: 0, width: '100%', height: '100%' }}
               allowFullScreen={false}
               loading="lazy"
@@ -38,6 +49,21 @@ export function Footer() {
             ))}
           </FooterNav>
         </FooterInformations>
+        <FooterMobileButtonsContainer>
+          <FooterMobileButton
+            href="https://goo.gl/maps/ogoc7tSstk5LupUR8"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <MapPin weight="fill" size={32} />
+          </FooterMobileButton>
+          <FooterMobileButton onClick={toggleSidebar}>
+            <List size={32} weight="bold" />
+          </FooterMobileButton>
+          <FooterMobileButton href="#home">
+            <CaretUp weight="bold" size={32} />
+          </FooterMobileButton>
+        </FooterMobileButtonsContainer>
       </FooterContent>
       <SubFooterContent>
         <SubFooterLogoContainer>
@@ -59,7 +85,7 @@ export function Footer() {
           >
             <GithubLogo weight="fill" size={24} />
           </SubFooterButton>
-          <SubFooterButton isFill href="#home">
+          <SubFooterButton isFill id="top" href="#home">
             <CaretUp weight="bold" size={24} />
           </SubFooterButton>
         </SubFooterButtons>
