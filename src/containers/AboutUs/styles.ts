@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AboutUsContainer = styled.section`
   width: 100%;
-  padding: 4rem;
+  padding: 4rem 8rem;
 
   display: flex;
   flex-direction: column;
@@ -55,14 +55,13 @@ export const AboutUsContent = styled.article`
 
 export const AboutUsLogoContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   max-height: 100%;
   position: relative;
 
   svg {
-    right: -50%;
     top: 50%;
     transform: translateY(-50%);
     height: 27.5rem;
@@ -70,7 +69,20 @@ export const AboutUsLogoContainer = styled.div`
     position: absolute;
   }
 
+  @media screen and (max-width: 1500px) {
+    svg {
+      right: -50%;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    svg {
+      right: -80%;
+    }
+  }
+
   @media screen and (max-width: 750px) {
+    justify-content: center;
     svg {
       position: relative;
       transform: translateY(0);

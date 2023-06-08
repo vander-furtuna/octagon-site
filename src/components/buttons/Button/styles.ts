@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
   cursor: pointer;
@@ -18,5 +18,8 @@ export const ButtonContainer = styled.button`
 
   &:hover {
     background: ${({ theme }) => theme.background.primary_hover};
+  }
+  &:active {
+    transform: scale(0.95);
   }
 `;

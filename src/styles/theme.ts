@@ -9,6 +9,7 @@ const palette = {
 
   gray700: '#282828',
   gray900: '#1F1F1F',
+  gray950: '#1A1A1A',
 
   green500: '#77FF95',
   blue500: '#59AFFF',
@@ -33,6 +34,7 @@ export const Theme = {
   background: {
     light: palette.gray700,
     bold: palette.gray900,
+    black: palette.gray950,
     primary: palette.primary_300,
     primary_hover: palette.primary_100,
   },

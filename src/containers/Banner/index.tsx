@@ -6,7 +6,7 @@ import { Header } from './Header';
 
 export function Banner() {
   return (
-    <BannerContainer background={BannerImage.src}>
+    <BannerContainer background={BannerImage.src} id="home">
       <Header />
       <div className="message">
         <span>

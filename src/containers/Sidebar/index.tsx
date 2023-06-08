@@ -1,3 +1,5 @@
+'use client';
+
 import { X } from '@phosphor-icons/react';
 
 import {
@@ -27,7 +29,11 @@ export function Sidebar() {
         </SidebarHeader>
         <SidebarNav>
           {NavItems.map((item) => (
-            <SidebarNavItem href={item.id} key={item.id}>
+            <SidebarNavItem
+              onClick={toggleSidebar}
+              href={item.id}
+              key={item.id}
+            >
               {item.label}
             </SidebarNavItem>
           ))}
