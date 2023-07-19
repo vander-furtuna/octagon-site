@@ -3,12 +3,15 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+  }
 
+  h1 {
+    font-family: 'Bai Jamjuree', sans-serif;
   }
 
   html {
@@ -26,7 +29,8 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
   }
 
   /* width */
