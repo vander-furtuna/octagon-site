@@ -1,68 +1,83 @@
 import styled from 'styled-components';
-
-interface BannerProps {
-  background: string;
-}
-
-export const BannerContainer = styled.section<BannerProps>`
-  width: 100%;
-  height: 40rem;
-  position: relative;
-
-  background: url(${({ background }) => background}) no-repeat center;
-
-  .message {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    span {
-      display: block;
-      width: 45rem;
-
-      font-weight: 700;
-      font-size: 2.5rem;
-      text-align: center;
-      color: ${({ theme }) => theme.text.light};
-
-      strong {
-        color: ${({ theme }) => theme.text.primary};
-      }
-    }
-  }
-
-  .overlay {
+import { transparentize } from 'polished';
+export const BannerContainer = styled.section`
     width: 100%;
-    height: 100%;
+    height: 40rem;
+    position: relative;
+    background: transparent;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+`;
 
-    background: linear-gradient(
-      to bottom,
-      ${({ theme }) => theme.background.bold} 0%,
-      transparent 100%
-    );
+export const BannerImage = styled.img`
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
-    z-index: 1;
-  }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+`;
 
-  @media screen and (max-width: 750px) {
-    .message {
-      span {
-        width: 35rem;
-        font-size: 2rem;
-      }
-    }
-  }
+export const BannerMessage = styled.div`
+    /* position: absolute; */
+    z-index: 2;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
 
-  @media screen and (max-width: 600px) {
-    .message {
-      span {
-        width: 21.5rem;
-        font-size: 1.25rem;
-      }
+    h1 {
+        display: block;
+        width: 45rem;
+        font-family: 'Bai Jamjuree', sans-serif;
+
+        font-weight: 700;
+        font-size: 2.75rem;
+        text-align: center;
+        color: ${({ theme }) => theme.text.light};
+
+        strong {
+            font-family: inherit;
+            color: ${({ theme }) => theme.text.primary};
+        }
     }
-  }
+
+    @media screen and (max-width: 750px) {
+        span {
+            width: 35rem;
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        span {
+            width: 21.5rem;
+            font-size: 1.25rem;
+        }
+    }
+`;
+
+export const BannerOverlay = styled.div`
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${({ theme }) =>
+        `linear-gradient(to bottom, ${transparentize(
+            0.8,
+            theme.background.bold,
+        )} 0%, ${theme.background.bold} 100%)`};
 `;

@@ -1,15 +1,18 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
-import { ButtonContainer } from './styles';
+import { ButtonContainer, ButtonIcon } from './styles';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  href?: string;
+    children: ReactNode;
+    Icon?: JSX.Element;
+    href?: string;
 }
 
-export function Button({ children, href, ...rest }: IButtonProps) {
-  return (
-    <ButtonContainer {...rest}>
-      <a href={href ? href : '#'}>{children}</a>
-    </ButtonContainer>
-  );
+export function Button({ children, href, Icon, ...rest }: IButtonProps) {
+    return (
+        <ButtonContainer {...rest}>
+            {Icon && <ButtonIcon>{Icon}</ButtonIcon>}
+
+            <a href={href ? href : '#'}>{children}</a>
+        </ButtonContainer>
+    );
 }

@@ -10,10 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-tap-highlight-color: transparent;
   }
 
-  h1 {
-    font-family: 'Bai Jamjuree', sans-serif;
-  }
-
   html {
     scroll-behavior: smooth;
   }

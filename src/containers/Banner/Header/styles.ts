@@ -1,18 +1,31 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import { transparentize } from 'polished';
 
 export const HeaderContainer = styled.header`
+    width: 100%;
+    padding: 3rem 4rem;
+`;
+
+export const HeaderContent = styled.div`
     position: relative;
 
     width: 100%;
+    height: 5.5rem;
+    padding: 1rem 2rem;
     z-index: 100;
-    padding: 3rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: ${({ theme }) => transparentize(0.4, theme.background.bold)};
+    border-radius: ${({ theme }) => theme.borderRadius};
+    backdrop-filter: blur(10px);
+
     .logo-container {
+        height: 100%;
         svg {
-            height: 4rem;
+            height: 100%;
             width: auto;
         }
     }
@@ -33,7 +46,7 @@ export const NavContainer = styled.nav`
     align-items: center;
     gap: 1rem;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1100px) {
         display: none;
     }
 `;
@@ -44,6 +57,7 @@ export const NavItem = styled(Link)`
     text-transform: uppercase;
     font-weight: 600;
     position: relative;
+    font-size: 0.9rem;
 
     &::after {
         transition: all 0.3s ease-in-out;
@@ -73,12 +87,12 @@ export const SidebarToggle = styled.button`
     width: 3rem;
     height: 3rem;
     background: ${({ theme }) => theme.background.primary};
-    border-radius: 0.5rem;
+    border-radius: ${({ theme }) => theme.borderRadius};
     svg {
         color: ${({ theme }) => theme.text.bold};
     }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1100px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -89,5 +103,3 @@ export const SidebarToggle = styled.button`
         height: 2.5rem;
     }
 `;
-
-export const HeaderContent = styled.div``;
