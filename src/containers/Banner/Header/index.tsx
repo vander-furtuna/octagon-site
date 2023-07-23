@@ -28,7 +28,13 @@ export function Header() {
                             {item.label}
                         </NavItem>
                     ))}
-                    <Button Icon={<Phone weight="bold" />}>Contato</Button>
+                    <Button
+                        href={process.env.NEXT_PUBLIC_WHATSAPP_LINK}
+                        isExternalLink
+                        Icon={<Phone weight="bold" />}
+                    >
+                        Contato
+                    </Button>
                 </NavContainer>
                 <SidebarToggle onClick={toggleSidebar}>
                     <List size={24} weight="bold" />

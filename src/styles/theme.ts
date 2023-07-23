@@ -1,12 +1,14 @@
 const palette = {
     white: '#fff',
     black: '#000',
-    primary_100: '#FFD363',
-    primary_300: '#F4B148',
-    primary_500: '#C78814',
-    primary_700: '#FF7701',
-    primary_900: '#522601',
+    primary100: '#FFD363',
+    primary300: '#F4B148',
+    primary500: '#C78814',
+    primary700: '#FF7701',
+    primary900: '#522601',
 
+    gray500: '#7D7D7D',
+    gray600: '#353535',
     gray700: '#282828',
     gray900: '#1F1F1F',
     gray950: '#1A1A1A',
@@ -17,38 +19,55 @@ const palette = {
 };
 
 export const Theme = {
+    ...palette,
     title: {
-        color: palette.primary_300,
-        underline: palette.primary_700,
+        color: {
+            primary: palette.primary300,
+            bold: palette.gray900,
+        },
+        underline: {
+            primary: palette.primary700,
+            bold: palette.gray900,
+        },
     },
     text: {
         light: palette.white,
         bold: palette.gray900,
-        primary: palette.primary_300,
+        primary: palette.primary300,
     },
-    nav_items: {
-        color: palette.primary_300,
-        hover: palette.primary_500,
-        underline: palette.primary_700,
+    navItems: {
+        color: palette.primary300,
+        hover: palette.primary500,
+        underline: palette.primary700,
     },
     background: {
+        thin: palette.gray600,
         light: palette.gray700,
         bold: palette.gray900,
         black: palette.gray950,
-        primary: palette.primary_300,
-        primary_hover: palette.primary_100,
+        primary: {
+            light: palette.primary100,
+            normal: palette.primary300,
+        },
     },
     outline: {
-        primary: palette.primary_300,
+        primary: palette.primary300,
+        light: palette.gray600,
     },
-    social_media: {
+    socialmedia: {
         email: palette.blue500,
         instagram: palette.pink500,
         phone: palette.green500,
     },
     icon: {
-        light: palette.white,
-        primary: palette.primary_300,
+        light: palette.primary100,
+        color: palette.primary300,
+        background: palette.gray700,
+        outline: palette.primary700,
+    },
+    font: {
+        title: "'Bai Jamjuree', sans-serif",
+        text: "'Inter', sans-serif",
     },
     borderRadius: '0.25rem',
 };

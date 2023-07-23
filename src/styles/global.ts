@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: ${({ theme }) => theme.font.text};
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -21,11 +21,15 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  h1, h2, h3, h4 {
+    font-family: ${({ theme }) => theme.font.title};
+  }
+
   input, button, textarea {
     border: none;
     outline: none;
     background-color: transparent;
-    font-family: 'Inter', sans-serif;
+    font-family: ${({ theme }) => theme.font.text};
     font-weight: 400;
   }
 
@@ -42,12 +46,12 @@ export const GlobalStyle = createGlobalStyle`
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: ${({ theme }) => theme.background.primary};
+  background: ${({ theme }) => theme.background.primary.normal};
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: ${({ theme }) => theme.background.primary_hover};
+  background: ${({ theme }) => theme.background.primary.light};
 }
 `;

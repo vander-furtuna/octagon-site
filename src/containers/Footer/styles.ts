@@ -11,9 +11,6 @@ export const FooterContainer = styled.footer`
     @media screen and (max-width: 700px) {
         height: 30rem;
     }
-    @media screen and (max-width: 550px) {
-        height: 21rem;
-    }
 `;
 
 export const FooterContent = styled.div`
@@ -29,7 +26,7 @@ export const FooterContent = styled.div`
     }
 
     @media screen and (max-width: 900px) {
-        padding: 2.5rem;
+        padding: 6rem 2rem;
 
         #logo {
             width: 8rem;
@@ -58,6 +55,7 @@ export const FooterInformations = styled.div`
 
 export const FooterNav = styled.ul`
     strong {
+        font-family: ${({ theme }) => theme.font.title};
         font-size: 1.5rem;
         color: ${({ theme }) => theme.text.primary};
     }
@@ -142,7 +140,7 @@ export const SubFooterButton = styled.a<ISubFooterButtonProps>`
     cursor: pointer;
     border-radius: ${({ theme }) => theme.borderRadius};
     background: ${({ theme, isFill }) =>
-        isFill ? theme.background.primary : theme.background.light};
+        isFill ? theme.background.primary.normal : theme.background.light};
 
     svg {
         transition: all 0.2s ease-in-out;
@@ -159,11 +157,11 @@ export const SubFooterButton = styled.a<ISubFooterButtonProps>`
         ${({ isFill, theme }) =>
             isFill &&
             css`
-                background: ${theme.background.primary_hover};
+                background: ${theme.background.primary.light};
             `}
         svg {
             color: ${({ theme, isFill }) =>
-                !isFill && theme.background.primary_hover};
+                !isFill && theme.background.primary.light};
         }
     }
 `;
@@ -192,7 +190,7 @@ export const FooterMobileButton = styled.a`
     text-decoration: none;
     cursor: pointer;
     border-radius: ${({ theme }) => theme.borderRadius};
-    background: ${({ theme }) => theme.background.primary};
+    background: ${({ theme }) => theme.background.primary.normal};
 
     svg {
         transition: all 0.2s ease-in-out;
@@ -200,7 +198,7 @@ export const FooterMobileButton = styled.a`
     }
 
     &:hover {
-        background: ${({ theme }) => theme.background.primary_hover};
+        background: ${({ theme }) => theme.background.primary.light};
     }
     &:active {
         transform: scale(0.9);

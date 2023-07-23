@@ -52,7 +52,7 @@ export const SidebarHeader = styled.header`
 
     .close {
         svg {
-            color: ${({ theme }) => theme.title.underline};
+            color: ${({ theme }) => theme.icon.outline};
         }
     }
 `;
@@ -66,13 +66,14 @@ export const SidebarNav = styled.nav`
 `;
 
 export const SidebarNavItem = styled(Link)`
-    color: ${({ theme }) => theme.nav_items.color};
+    color: ${({ theme }) => theme.navItems.color};
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     position: relative;
     font-size: 1.25rem;
     z-index: 210;
+    font-family: ${({ theme }) => theme.font.title};
 
     &::after {
         transition: all 0.3s ease-in-out;

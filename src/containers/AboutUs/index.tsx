@@ -6,19 +6,26 @@ import {
 } from './styles';
 import { aboutUsData } from '@/data/aboutus/aboutUsData';
 import { OctagonAboutUsLogo } from '@/assets/images/banner/octagon-aboutus';
+import { CaretRight } from '@phosphor-icons/react';
 
 export function AboutUs() {
     return (
         <AboutUsContainer>
             <header>
-                <Title>Sobre a Octagon</Title>
+                <Title variant="dark">Sobre a Octagon</Title>
             </header>
 
             <div className="informations">
                 <AboutUsContent>
                     {aboutUsData.map((topic) => (
                         <div className="topic" key={topic.title}>
-                            <strong className="title">{topic.title}</strong>
+                            <h2>
+                                <CaretRight
+                                    weight="bold"
+                                    className="title-icon"
+                                />
+                                {topic.title}
+                            </h2>
                             <span className="description">
                                 {topic.description}
                             </span>

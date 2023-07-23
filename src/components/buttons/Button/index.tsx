@@ -5,14 +5,29 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     Icon?: JSX.Element;
     href?: string;
+    iconPosition?: 'right' | 'left';
+    isExternalLink?: boolean;
 }
 
-export function Button({ children, href, Icon, ...rest }: IButtonProps) {
+export function Button({
+    children,
+    href = '#',
+    Icon,
+    iconPosition = 'left',
+    isExternalLink = false,
+    ...rest
+}: IButtonProps) {
     return (
-        <ButtonContainer {...rest}>
+        <ButtonContainer {...rest} iconPosition={iconPosition}>
             {Icon && <ButtonIcon>{Icon}</ButtonIcon>}
 
-            <a href={href ? href : '#'}>{children}</a>
+            <a
+                href={href}
+                target={isExternalLink ? '_blank' : '_self'}
+                rel="noreferrer"
+            >
+                {children}
+            </a>
         </ButtonContainer>
     );
 }

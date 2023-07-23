@@ -5,6 +5,13 @@ import { transparentize } from 'polished';
 export const HeaderContainer = styled.header`
     width: 100%;
     padding: 3rem 4rem;
+
+    @media screen and (max-width: 550px) {
+        padding: 2rem 3rem;
+    }
+    @media screen and (max-width: 500px) {
+        padding: 2rem 1rem;
+    }
 `;
 
 export const HeaderContent = styled.div`
@@ -24,6 +31,8 @@ export const HeaderContent = styled.div`
 
     .logo-container {
         height: 100%;
+        display: flex;
+        align-items: center;
         svg {
             height: 100%;
             width: auto;
@@ -31,7 +40,7 @@ export const HeaderContent = styled.div`
     }
 
     @media screen and (max-width: 600px) {
-        padding: 2rem;
+        padding: 0.5rem 1.5rem;
 
         .logo-container {
             svg {
@@ -52,7 +61,7 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavItem = styled(Link)`
-    color: ${({ theme }) => theme.nav_items.color};
+    color: ${({ theme }) => theme.navItems.color};
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -69,7 +78,7 @@ export const NavItem = styled(Link)`
         bottom: -0.25rem;
         left: 50%;
         transform: translateX(-50%);
-        background: ${({ theme }) => theme.nav_items.underline};
+        background: ${({ theme }) => theme.navItems.underline};
     }
 
     &:hover {
@@ -86,7 +95,7 @@ export const SidebarToggle = styled.button`
     align-items: center;
     width: 3rem;
     height: 3rem;
-    background: ${({ theme }) => theme.background.primary};
+    background: ${({ theme }) => theme.background.primary.normal};
     border-radius: ${({ theme }) => theme.borderRadius};
     svg {
         color: ${({ theme }) => theme.text.bold};

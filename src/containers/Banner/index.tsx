@@ -23,8 +23,12 @@ export function Banner() {
                     <strong>engenharia</strong>
                 </h1>
             </BannerMessage>
-            <Button>
-                Saiba mais <CaretRight size={20} weight="bold" />
+            <Button
+                Icon={<CaretRight size={20} weight="bold" />}
+                iconPosition="right"
+                href="#servicos"
+            >
+                Saiba mais
             </Button>
 
             <BannerOverlay />

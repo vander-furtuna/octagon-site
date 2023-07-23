@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { ColorVariantType } from '.';
 
-export const TitleContainer = styled(motion.h1)`
+interface ITitleContainer {
+    variant: ColorVariantType;
+}
+
+export const TitleContainer = styled(motion.h1)<ITitleContainer>`
     font-size: 2rem;
-    color: ${({ theme }) => theme.title.color};
+    color: ${({ theme, variant }) =>
+        variant === 'dark'
+            ? theme.title.color.bold
+            : theme.title.color.primary};
     position: relative;
     text-align: center;
     text-transform: uppercase;
     width: fit-content;
-    font-family: 'Bai Jamjuree', sans-serif;
+    height: fit-content;
 
     &::after {
         content: '';
@@ -20,7 +28,10 @@ export const TitleContainer = styled(motion.h1)`
         height: 4px;
         border-radius: 10px;
 
-        background: ${({ theme }) => theme.title.underline};
+        background: ${({ theme, variant }) =>
+            variant === 'dark'
+                ? theme.title.underline.bold
+                : theme.title.underline.primary};
     }
 
     @media screen and (max-width: 600px) {
@@ -31,14 +42,14 @@ export const TitleContainer = styled(motion.h1)`
 export const Character = styled(motion.span)`
     display: inline-block;
     margin-right: 0.05rem;
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: inherit;
 `;
 
 export const Word = styled(motion.div)`
     & + span {
         margin-left: 0.35rem;
     }
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: inherit;
     display: inline-block;
     line-height: 1.2;
 

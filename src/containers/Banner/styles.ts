@@ -39,8 +39,9 @@ export const BannerMessage = styled.div`
 
     h1 {
         display: block;
-        width: 45rem;
-        font-family: 'Bai Jamjuree', sans-serif;
+        width: 100%;
+        padding: 2rem;
+        max-width: 46rem;
 
         font-weight: 700;
         font-size: 2.75rem;
@@ -48,24 +49,21 @@ export const BannerMessage = styled.div`
         color: ${({ theme }) => theme.text.light};
 
         strong {
-            font-family: inherit;
             color: ${({ theme }) => theme.text.primary};
         }
     }
 
     @media screen and (max-width: 750px) {
-        span {
-            width: 35rem;
-            font-size: 2rem;
+        h1 {
+            font-size: 1.75rem;
         }
     }
 
-    @media screen and (max-width: 600px) {
-        span {
-            width: 21.5rem;
+    /* @media screen and (max-width: 600px) {
+        h1 {
             font-size: 1.25rem;
         }
-    }
+    } */
 `;
 
 export const BannerOverlay = styled.div`

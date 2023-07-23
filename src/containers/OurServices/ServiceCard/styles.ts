@@ -7,14 +7,15 @@ interface IServiceCardImage {
 export const ServiceCardContainer = styled.div`
     background: ${({ theme }) => theme.background.light};
     height: 25rem;
-    width: 55rem;
+    width: 60rem;
     border-radius: ${({ theme }) => theme.borderRadius};
+    border: 1px solid ${({ theme }) => theme.outline.light};
     display: flex;
     justify-content: space-between;
     overflow: hidden;
 
     @media screen and (max-width: 900px) {
-        width: 45rem;
+        width: 46rem;
         height: 22rem;
     }
 
@@ -28,7 +29,7 @@ export const ServiceCardContainer = styled.div`
 export const ServiceCardContent = styled.div`
     padding: 2.625rem 3rem;
     height: 100%;
-    gap: 1.5rem;
+    gap: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -43,7 +44,7 @@ export const ServiceList = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
 `;
 
 export const ServiceListOption = styled.li`
@@ -59,12 +60,11 @@ export const ServiceCardButton = styled.div`
     }
 `;
 
-export const ServiceCardImage = styled.div<IServiceCardImage>`
+export const ServiceCardImage = styled.figure`
     height: 100%;
-    min-width: 24rem;
-    max-width: 24rem;
-
-    background: url(${({ image_url }) => image_url});
+    min-width: 28rem;
+    max-width: 28rem;
+    position: relative;
 
     background-repeat: no-repeat;
     background-position: center;
