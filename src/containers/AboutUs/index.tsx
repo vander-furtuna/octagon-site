@@ -10,7 +10,7 @@ import { CaretRight } from '@phosphor-icons/react';
 
 export function AboutUs() {
     return (
-        <AboutUsContainer>
+        <AboutUsContainer id="sobre">
             <header>
                 <Title variant="dark">Sobre a Octagon</Title>
             </header>

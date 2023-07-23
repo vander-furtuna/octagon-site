@@ -13,7 +13,7 @@ export function CommonQuestions() {
     const CONTACT_LINK = process.env.NEXT_PUBLIC_WHATSAPP_LINK || '';
 
     return (
-        <QuestionsContainer>
+        <QuestionsContainer id="faq">
             <header>
                 <Title>FAQ</Title>
                 <span className="subtitle">
