@@ -1,9 +1,12 @@
 import { IServiceIcon } from "@/dtos/IService";
 import { ServiceIconCardWrapper } from "./styles";
 
-interface IServiceIconCardProps extends IServiceIcon {}
+interface IServiceIconCardProps {
+  icon: IServiceIcon;
+}
 
-export function ServiceIconCard({ Icon, title, href }: IServiceIconCardProps) {
+export function ServiceIconCard({ icon }: IServiceIconCardProps) {
+  const { Icon, title, href } = icon;
   return (
     <ServiceIconCardWrapper href={href}>
       <div className="icon">{Icon}</div>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   ReactNode,
@@ -7,7 +7,7 @@ import {
   useContext,
   useMemo,
   useState,
-} from 'react';
+} from "react";
 
 interface ISidebarContext {
   isSidebarOpen: boolean;
@@ -44,7 +44,7 @@ export function useSidebar(): ISidebarContext {
   const context = useContext(SidebarContext);
 
   if (!context) {
-    throw new Error('useSidebar must be used within a AppProvider');
+    throw new Error("useSidebar must be used within a AppProvider");
   }
 
   return context;

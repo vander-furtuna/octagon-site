@@ -21,6 +21,7 @@ export const ServiceIconCardWrapper = styled.a`
     text-align: center;
     font-weight: 600;
     color: ${({ theme }) => theme.text.light};
+    min-height: 50px;
   }
 
   &:active {

@@ -1,46 +1,65 @@
-import { IService } from "@/dtos/IService";
+import { IService } from '@/dtos/IService';
+import electricProjectImg from '@/assets/images/services/electric-project.jpg';
+import technicalReportImg from '@/assets/images/services/technical-report.jpg';
+import photovoltaicProjectImg from '@/assets/images/services/photovoltaic-project.jpg';
+import energyEfficiencyImg from '@/assets/images/services/energy-efficiency.jpg';
+
+const CONTACT_LINK = process.env.NEXT_PUBLIC_WHATSAPP_LINK || '';
 
 export const serviceData: IService[] = [
-  {
-    title: "Projetos de Sistemas Fotovoltaicos",
-    options: ["Elaboração", "Instalação", "Manutenção do sistema"],
-    image_url:
-      "https://images.unsplash.com/photo-1615630859219-0459703c34e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    href_id: "servico-fotovoltaico",
-    button: {
-      url: "",
-      label: "Saiba Mais",
+    {
+        title: 'Projetos de Sistemas Fotovoltáicos',
+        options: ['Elaboração', 'Instalação', 'Manutenção do sistema'],
+        image_url: photovoltaicProjectImg.src,
+        href_id: 'projeto-fotovoltaico',
+        button: {
+            url: CONTACT_LINK,
+            label: 'Saiba Mais',
+        },
     },
-  },
-  {
-    title: "Projetos de Instalações Elétricas",
-    options: [
-      "Atualização da instalação elétrica",
-      "Orçamento do material",
-      "Instalações elétricas prediais",
-      "Consultoria e assesoria",
-    ],
-    image_url:
-      "https://images.unsplash.com/photo-1615630859219-0459703c34e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    href_id: "servico-projeto",
-    button: {
-      url: "",
-      label: "Saiba Mais",
+    {
+        title: 'Projetos de Instalações Elétricas',
+        options: [
+            'Instalações prediais e residenciais',
+            'Orçamento de material',
+            'SPDA',
+            'Consultoria e assessoria',
+            'Manutenção preventiva e corretiva',
+            'Inspeção da instalação elétrica',
+        ],
+        image_url: electricProjectImg.src,
+        href_id: 'projeto-eletrico',
+        button: {
+            url: CONTACT_LINK,
+            label: 'Saiba Mais',
+        },
     },
-  },
-  {
-    title: "Manutenção de Instalações Elétricas",
-    options: [
-      "Manutenção preventiva",
-      "Inspeção de instalação elétrica",
-      "Manutenção do sistema",
-    ],
-    image_url:
-      "https://images.unsplash.com/photo-1615630859219-0459703c34e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    href_id: "servico-manutencao",
-    button: {
-      url: "",
-      label: "Saiba Mais",
+    {
+        title: 'Elaboração de Láudo Técnico',
+        options: [
+            'Manutenção preventiva',
+            'Inspeção de instalação elétrica',
+            'Manutenção do sistema',
+        ],
+        image_url: technicalReportImg.src,
+        href_id: 'laudos-tecnicos',
+        button: {
+            url: CONTACT_LINK,
+            label: 'Saiba Mais',
+        },
     },
-  },
+    {
+        title: 'Análise de Eficiência Energética',
+        options: [
+            'Análise da fatura de conta de energia',
+            'Elaboração e implementação de medidas de eficiência energética',
+            'Projetos de geração de energia com painéis fotovoltaicos',
+        ],
+        image_url: energyEfficiencyImg.src,
+        href_id: 'eficiencia-energetica',
+        button: {
+            url: CONTACT_LINK,
+            label: 'Saiba Mais',
+        },
+    },
 ];
