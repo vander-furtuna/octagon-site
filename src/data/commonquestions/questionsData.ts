@@ -11,6 +11,6 @@ export const questionsData: ICommonQuestion[] = [
     },
     {
         question: 'Quais as garantias oferecidas pela empresa?',
-        answer: 'Já atuamos há mais de 10 anos no mercado e nossos serviços são realizados por estudantes de graduação experientes, por profissionais habilitados, além da orientação de professores da área. Também emitimos nota fiscal e elaboramos um contrato dos nossos serviços.',
+        answer: 'Já atuamos há mais de 10 anos no mercado e nossos serviços são realizados por estudantes de graduação experientes, por profissionais habilitados, além da orientação de professores da área.',
     },
 ];
