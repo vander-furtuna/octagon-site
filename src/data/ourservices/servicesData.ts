@@ -8,8 +8,12 @@ const CONTACT_LINK = process.env.NEXT_PUBLIC_WHATSAPP_LINK || '';
 
 export const serviceData: IService[] = [
     {
-        title: 'Projetos de Sistemas Fotovoltáicos',
-        options: ['Elaboração', 'Instalação', 'Manutenção do sistema'],
+        title: 'Sistemas Fotovoltáicos',
+        options: [
+            'Elaboração de projetos',
+            'Instalação de equipamentos',
+            'Manutenção do sistema',
+        ],
         image_url: photovoltaicProjectImg.src,
         href_id: 'projeto-fotovoltaico',
         button: {
@@ -35,11 +39,11 @@ export const serviceData: IService[] = [
         },
     },
     {
-        title: 'Elaboração de Láudo Técnico',
+        title: 'Elaboração de Laudo Técnico',
         options: [
-            'Manutenção preventiva',
-            'Inspeção de instalação elétrica',
-            'Manutenção do sistema',
+            'Laudo de aterramento',
+            'Laudo de instalação elétrica',
+            'Laudo de SPDA',
         ],
         image_url: technicalReportImg.src,
         href_id: 'laudos-tecnicos',
