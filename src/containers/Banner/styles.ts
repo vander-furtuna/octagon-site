@@ -49,6 +49,7 @@ export const BannerMessage = styled.div`
         color: ${({ theme }) => theme.text.light};
 
         strong {
+            font-family: inherit;
             color: ${({ theme }) => theme.text.primary};
         }
     }
