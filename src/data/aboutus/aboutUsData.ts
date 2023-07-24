@@ -17,6 +17,6 @@ export const aboutUsData: IAboutUs[] = [
     {
         title: 'Visão e Valores',
         description:
-            'Proporcionar o crescimento da Octagon, para que se torne uma empresa júnior cada vez mais conhecida. Para que assim, cosiga-se obter um elevado número de parcerias, clientes e projetos.',
+            'Proporcionar o crescimento da Octagon, para que se torne uma empresa júnior cada vez mais conhecida. Para que assim, consiga-se obter um elevado número de parcerias, clientes e projetos.',
     },
 ];
