@@ -6,7 +6,7 @@ import { IServiceIcon } from '@/dtos/IService';
 
 export const iconsData: IServiceIcon[] = [
     {
-        title: 'Projetos de Sistemas Fotovotáicos',
+        title: 'Projetos de Sistemas Fotovotaicos',
         Icon: <PhotovoltaicIcon />,
         href: '#projeto-fotovoltaico',
     },

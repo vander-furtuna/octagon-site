@@ -8,7 +8,7 @@ const CONTACT_LINK = process.env.NEXT_PUBLIC_WHATSAPP_LINK || '';
 
 export const serviceData: IService[] = [
     {
-        title: 'Sistemas Fotovoltáicos',
+        title: 'Projetos de Sistemas Fotovoltaicos',
         options: [
             'Elaboração de projetos',
             'Instalação de equipamentos',

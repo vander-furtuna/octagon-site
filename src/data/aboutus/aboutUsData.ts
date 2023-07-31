@@ -12,7 +12,7 @@ export const aboutUsData: IAboutUs[] = [
     {
         title: 'Missão',
         description:
-            'Nossa missão é proporcionar aos membros efetivos, condições necessárias à aplicação prática dos conhecimentos obtidos durante a graduação e dar à sociedade o retorno aos investimentos que ela realiza na universidade pública através de serviços, prestados por alunos da UFC.',
+            'Nossa missão é proporcionar aos membros efetivos, condições necessárias à aplicação prática dos conhecimentos obtidos durante a graduação e dar à sociedade o retorno aos investimentos que ela realiza na universidade pública através de serviços de baixo custo e qualidade, ofertados por alunos da UFC.',
     },
     {
         title: 'Visão e Valores',
