@@ -27,7 +27,11 @@ export function AboutUs() {
                                 {topic.title}
                             </h2>
                             <span className="description">
-                                {topic.description}
+                                {topic.description.map((paragraph) => (
+                                    <p>
+                                        {paragraph}
+                                    </p>
+                                ))}
                             </span>
                         </div>
                     ))}
