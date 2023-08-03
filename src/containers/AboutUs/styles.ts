@@ -59,6 +59,9 @@ export const AboutUsContent = styled.article`
             }
         }
         .description {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
             p {
                 color: ${({ theme }) => theme.text.bold};
                 font-size: 1.1rem;
