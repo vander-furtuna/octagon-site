@@ -17,6 +17,6 @@ export const aboutUsData: IAboutUs[] = [
     {
         title: 'Visão e Valores',
         description:
-            'Proporcionar o crescimento da Octagon, para que se torne uma empresa júnior cada vez mais conhecida. Para que assim, consiga-se obter um elevado número de parcerias, clientes e projetos.',
+            'Aprendizado contínuo: Buscar sempre aprimorar e adquirir novos conhecimentos, valorizando o aprendizado como base para o crescimento pessoal e profissional. Excelência: Buscar a excelência em todas as atividades realizadas, oferecendo serviços de qualidade e buscando constantemente a melhoria dos processos. Paixão: sentir empolgação com o que é feito, como é feito e pelas pessoas envolvidas, inspirando excelência e promovendo criatividade para superar obstáculos. Valorização das pessoas: Reconhecer e valorizar o potencial de cada membro da equipe, promovendo um ambiente inclusivo e respeitoso. Inovação e criatividade: Estimular a criatividade e a busca por soluções inovadoras, buscando sempre novas abordagens para os desafios apresentados.',
     },
 ];
