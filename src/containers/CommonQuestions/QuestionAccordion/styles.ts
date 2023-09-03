@@ -17,6 +17,7 @@ export const AccordionContainer = styled.div`
 export const AccodionHeader = styled.div<IAccordion>`
     width: 100%;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
     height: 3.5rem;
     border-radius: ${({ theme }) => theme.borderRadius};
