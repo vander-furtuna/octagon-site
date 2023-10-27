@@ -20,6 +20,10 @@ const palette = {
 
 export const Theme = {
     ...palette,
+    logo: {
+        primary: palette.primary300,
+        dark: palette.gray700,
+    },
     title: {
         color: {
             primary: palette.primary300,

@@ -28,16 +28,14 @@ export function AboutUs() {
                             </h2>
                             <span className="description">
                                 {topic.description.map((paragraph) => (
-                                    <p key={paragraph}>
-                                        {paragraph}
-                                    </p>
+                                    <p key={paragraph}>{paragraph}</p>
                                 ))}
                             </span>
                         </div>
                     ))}
                 </AboutUsContent>
                 <AboutUsLogoContainer>
-                    <OctagonAboutUsLogo />
+                    <OctagonAboutUsLogo color="translucent" />
                 </AboutUsLogoContainer>
             </div>
         </AboutUsContainer>
