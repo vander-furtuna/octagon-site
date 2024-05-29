@@ -1,35 +1,31 @@
-import { ICommonQuestion } from '@/dtos/ICommonQuestion';
-import { AccodionHeader, AccordionContainer, AccordionContent } from './styles';
-import { useState } from 'react';
-import { Minus, Plus } from '@phosphor-icons/react';
+import { Minus, Plus } from '@phosphor-icons/react'
+import { useState } from 'react'
+
+import { ICommonQuestion } from '@/dtos/ICommonQuestion'
+
+import { AccordionContainer } from './styles'
 
 interface IQuestionAccordion {
-    question: ICommonQuestion;
+  question: ICommonQuestion
 }
 
 export function QuestionAccordion({
-    question: { answer, question },
+  question: { answer, question },
 }: IQuestionAccordion) {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
-    return (
-        <AccordionContainer>
-            <AccodionHeader
-                isOpen={isOpen}
-                onClick={() => setIsOpen((prev) => !prev)}
-            >
-                <span>{question}</span>
-                <div className="icon-container">
-                    {isOpen ? (
-                        <Minus size={24} width="bold" />
-                    ) : (
-                        <Plus size={24} weight="bold" />
-                    )}
-                </div>
-            </AccodionHeader>
-            <AccordionContent isOpen={isOpen}>
-                <span>{answer}</span>
-            </AccordionContent>
-        </AccordionContainer>
-    );
+  return (
+    <AccordionContainer>
+      <div className="accordion-header">
+        <span>{question}</span>
+        <div className="icon-container">
+          <Minus size={24} width="bold" className="minus" />
+          <Plus size={24} weight="bold" className="plus" />
+        </div>
+      </div>
+      <div className="accordion-content">
+        <span>{answer}</span>
+      </div>
+    </AccordionContainer>
+  )
 }

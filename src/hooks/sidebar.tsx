@@ -1,31 +1,31 @@
-"use client";
+'use client'
 
 import {
-  ReactNode,
   createContext,
+  ReactNode,
   useCallback,
   useContext,
   useMemo,
   useState,
-} from "react";
+} from 'react'
 
 interface ISidebarContext {
-  isSidebarOpen: boolean;
-  toggleSidebar: () => void;
+  isSidebarOpen: boolean
+  toggleSidebar: () => void
 }
 
 interface ISidebarProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
-const SidebarContext = createContext<ISidebarContext>({} as ISidebarContext);
+const SidebarContext = createContext<ISidebarContext>({} as ISidebarContext)
 
 export function SidebarProvider({ children }: ISidebarProviderProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const toggleSidebar = useCallback(() => {
-    setIsSidebarOpen((prevState) => !prevState);
-  }, []);
+    setIsSidebarOpen((prevState) => !prevState)
+  }, [])
 
   const value = useMemo(
     () => ({
@@ -33,19 +33,19 @@ export function SidebarProvider({ children }: ISidebarProviderProps) {
       toggleSidebar,
     }),
     [isSidebarOpen, toggleSidebar],
-  );
+  )
 
   return (
     <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>
-  );
+  )
 }
 
 export function useSidebar(): ISidebarContext {
-  const context = useContext(SidebarContext);
+  const context = useContext(SidebarContext)
 
   if (!context) {
-    throw new Error("useSidebar must be used within a AppProvider");
+    throw new Error('useSidebar must be used within a AppProvider')
   }
 
-  return context;
+  return context
 }

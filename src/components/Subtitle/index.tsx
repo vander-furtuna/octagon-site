@@ -1,10 +1,11 @@
-import { ReactNode } from "react";
-import { SubtitleContainer } from "./stylest";
+import { ReactNode } from 'react'
+
+import { SubtitleContainer } from './stylest'
 
 interface ISubtitleProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export function Subtitle({ children }: ISubtitleProps) {
-  return <SubtitleContainer>{children}</SubtitleContainer>;
+  return <SubtitleContainer>{children}</SubtitleContainer>
 }

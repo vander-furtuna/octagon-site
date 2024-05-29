@@ -1,16 +1,17 @@
-"use client";
+'use client'
 
-import { Title } from "@/components/Title";
+import { Title } from '@/components/Title'
+import { iconsData } from '@/data/ourservices/iconsData'
+import { serviceData } from '@/data/ourservices/servicesData'
+
+import { ServiceCard } from './ServiceCard'
+import { ServiceIconCard } from './ServiceIconCard'
 import {
   OurServicesContainer,
   ServicesCardContainer,
   ServicesContent,
   ServicesIconsContainer,
-} from "./styles";
-import { iconsData } from "@/data/ourservices/iconsData";
-import { ServiceIconCard } from "./ServiceIconCard";
-import { serviceData } from "@/data/ourservices/servicesData";
-import { ServiceCard } from "./ServiceCard";
+} from './styles'
 
 export function OurServices() {
   return (
@@ -31,5 +32,5 @@ export function OurServices() {
         </ServicesCardContainer>
       </ServicesContent>
     </OurServicesContainer>
-  );
+  )
 }

@@ -88,5 +88,5 @@ export function OctagonLogo() {
         fill="white"
       />
     </svg>
-  );
+  )
 }
