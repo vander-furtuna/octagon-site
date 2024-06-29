@@ -1,5 +1,5 @@
 <h1 align="center">
-<img width="100%" alt="Octagon Banner" src="https://github.com/vander115/octagon-site/assets/101757815/5d767258-73c4-498d-b668-a00f9d271aa3">
+<img width="100%" alt="Octagon Banner" src="https://github.com/vander-furtuna/octagon-site/assets/101757815/5d767258-73c4-498d-b668-a00f9d271aa3">
 </h1>
 
 <h3 align="center">
