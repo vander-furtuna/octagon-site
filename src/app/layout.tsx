@@ -1,17 +1,37 @@
 import type { Metadata } from 'next'
-import { Bai_Jamjuree, Inter } from 'next/font/google'
 import './globals.css'
+import localFont from 'next/font/local'
 
-const inter = Inter({
+const inter = localFont({
+  src: '../assets/fonts/inter/inter-variable.ttf',
   variable: '--font-inter',
-  subsets: ['latin'],
   display: 'swap',
 })
 
-const baiJamjuree = Bai_Jamjuree({
+const baiJamjuree = localFont({
+  src: [
+    {
+      path: '../assets/fonts/bai-jamjuree/BaiJamjuree-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/bai-jamjuree/BaiJamjuree-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/bai-jamjuree/BaiJamjuree-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/bai-jamjuree/BaiJamjuree-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
   variable: '--font-bai-jamjuree',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -28,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.variable} ${baiJamjuree.variable} font-sans antialiased`}
+        className={`${inter.variable} ${baiJamjuree.variable} bg-stone-900 font-sans antialiased`}
       >
         {children}
       </body>
