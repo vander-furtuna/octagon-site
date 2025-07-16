@@ -1,10 +1,12 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
+import { Icon, IconName } from '@/components/Icon'
+
 import { ButtonContainer, ButtonIcon } from './styles'
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
-  Icon?: JSX.Element
+  icon?: IconName
   href?: string
   iconPosition?: 'right' | 'left'
   isExternalLink?: boolean
@@ -13,14 +15,18 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export function Button({
   children,
   href = '#',
-  Icon,
+  icon,
   iconPosition = 'left',
   isExternalLink = false,
   ...rest
 }: IButtonProps) {
   return (
     <ButtonContainer {...rest} iconPosition={iconPosition}>
-      {Icon && <ButtonIcon>{Icon}</ButtonIcon>}
+      {icon && (
+        <ButtonIcon>
+          <Icon name={icon} />
+        </ButtonIcon>
+      )}
 
       <a
         href={href}

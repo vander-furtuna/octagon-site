@@ -1,4 +1,4 @@
-import { CaretRight } from '@phosphor-icons/react'
+import { ChevronRight } from 'lucide-react'
 
 import { OctagonAboutUsLogo } from '@/assets/images/banner/octagon-aboutus'
 import { Title } from '@/components/Title'
@@ -22,7 +22,7 @@ export function AboutUs() {
           {aboutUsData.map((topic) => (
             <div className="topic" key={topic.title}>
               <h2>
-                <CaretRight weight="bold" className="title-icon" />
+                <ChevronRight className="title-icon" />
                 {topic.title}
               </h2>
               <span className="description">

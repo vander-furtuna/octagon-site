@@ -1,4 +1,3 @@
-import { CaretRight } from '@phosphor-icons/react'
 import Image from 'next/image'
 
 import { Button } from '@/components/buttons/Button'
@@ -32,7 +31,7 @@ export function ServiceCard({
         </ServiceList>
         <ServiceCardButton>
           <Button
-            Icon={<CaretRight size={20} weight="bold" />}
+            icon="ChevronRight"
             href={button.url}
             isExternalLink
             iconPosition="right"

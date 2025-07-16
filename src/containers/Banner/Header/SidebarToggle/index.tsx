@@ -1,6 +1,6 @@
 'use client'
 
-import { List } from '@phosphor-icons/react'
+import { AlignJustify } from 'lucide-react'
 
 import { useSidebar } from '@/hooks/sidebar'
 
@@ -10,7 +10,7 @@ export function SidebarToggle() {
   const { toggleSidebar } = useSidebar()
   return (
     <SidebarToggleContainer onClick={toggleSidebar}>
-      <List size={24} weight="bold" />
+      <AlignJustify size={24} />
     </SidebarToggleContainer>
   )
 }

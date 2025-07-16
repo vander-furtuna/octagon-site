@@ -1,5 +1,4 @@
 'use client'
-import { CaretRight } from '@phosphor-icons/react'
 
 import BannerImageUrl from '@/assets/images/banner/banner.jpg'
 import { Button } from '@/components/buttons/Button'
@@ -23,11 +22,7 @@ export function Banner() {
           o mundo com <strong>engenharia</strong>
         </h1>
       </BannerMessage>
-      <Button
-        Icon={<CaretRight size={20} weight="bold" />}
-        iconPosition="right"
-        href="#servicos"
-      >
+      <Button icon="ChevronRight" iconPosition="right" href="#servicos">
         Saiba mais
       </Button>
 

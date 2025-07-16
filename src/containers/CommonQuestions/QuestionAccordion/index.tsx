@@ -1,5 +1,4 @@
-import { Minus, Plus } from '@phosphor-icons/react'
-import { useState } from 'react'
+import { Minus, Plus } from 'lucide-react'
 
 import { ICommonQuestion } from '@/dtos/ICommonQuestion'
 
@@ -12,17 +11,17 @@ interface IQuestionAccordion {
 export function QuestionAccordion({
   question: { answer, question },
 }: IQuestionAccordion) {
-  const [isOpen, setIsOpen] = useState(false)
-
+  const slug = question.toLowerCase().replace(/ /g, '-')
   return (
     <AccordionContainer>
-      <div className="accordion-header">
+      <label className="accordion-header" htmlFor={slug}>
         <span>{question}</span>
         <div className="icon-container">
-          <Minus size={24} width="bold" className="minus" />
-          <Plus size={24} weight="bold" className="plus" />
+          <Minus size={24} className="minus" />
+          <Plus size={24} className="plus" />
         </div>
-      </div>
+        <input type="checkbox" id={slug} />
+      </label>
       <div className="accordion-content">
         <span>{answer}</span>
       </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, X } from '@phosphor-icons/react'
+import { X } from 'lucide-react'
 
 import { Button } from '@/components/buttons/Button'
 import { NavItems } from '@/data/header/navItems'
@@ -25,7 +25,7 @@ export function Sidebar() {
       <SidebarContent isOpen={isSidebarOpen}>
         <SidebarHeader>
           <button className="close" onClick={toggleSidebar}>
-            <X size={30} weight="bold" />
+            <X size={30} />
           </button>
         </SidebarHeader>
         <SidebarNav>
@@ -43,7 +43,7 @@ export function Sidebar() {
           <Button
             isExternalLink
             href={process.env.NEXT_PUBLIC_WHATSAPP_LINK}
-            Icon={<Phone weight="bold" />}
+            icon="Phone"
           >
             Contato
           </Button>

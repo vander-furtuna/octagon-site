@@ -1,16 +1,10 @@
-import {
-  CaretUp,
-  GithubLogo,
-  InstagramLogo,
-  List,
-  MapPin,
-} from '@phosphor-icons/react'
+import { ChevronUp, Github, Instagram, MapPin } from 'lucide-react'
 
 import { OctagonFooterLogo } from '@/assets/images/octagon-footer'
 import { VanderSuncatLogo } from '@/assets/images/vander-logo'
 import { NavItems } from '@/data/header/navItems'
-import { useSidebar } from '@/hooks/sidebar'
 
+import { SidebarToggle } from '../Banner/Header/SidebarToggle'
 import {
   FooterContainer,
   FooterContent,
@@ -26,8 +20,6 @@ import {
 } from './styles'
 
 export function Footer() {
-  const { toggleSidebar } = useSidebar()
-
   return (
     <FooterContainer>
       <FooterContent>
@@ -62,13 +54,11 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <MapPin weight="fill" size={32} />
+            <MapPin size={32} />
           </FooterMobileButton>
-          <FooterMobileButton onClick={toggleSidebar}>
-            <List size={32} weight="bold" />
-          </FooterMobileButton>
+          <SidebarToggle />
           <FooterMobileButton href="#home">
-            <CaretUp weight="bold" size={32} />
+            <ChevronUp size={32} />
           </FooterMobileButton>
         </FooterMobileButtonsContainer>
       </FooterContent>
@@ -83,17 +73,17 @@ export function Footer() {
             rel="noreferrer"
             href="https://instagram.com/vander_suncat?igshid=ZDc4ODBmNjlmNQ=="
           >
-            <InstagramLogo weight="fill" size={24} />
+            <Instagram size={24} />
           </SubFooterButton>
           <SubFooterButton
             target="_blank"
             rel="noreferrer"
             href="https://github.com/vander115"
           >
-            <GithubLogo weight="fill" size={24} />
+            <Github size={24} />
           </SubFooterButton>
           <SubFooterButton isFill id="top" href="#home">
-            <CaretUp weight="bold" size={24} />
+            <ChevronUp size={24} />
           </SubFooterButton>
         </SubFooterButtons>
       </SubFooterContent>

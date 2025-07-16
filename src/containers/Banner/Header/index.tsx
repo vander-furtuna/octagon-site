@@ -1,5 +1,3 @@
-import { Phone } from '@phosphor-icons/react'
-
 import { OctagonLogo } from '@/assets/images/banner/octagon-logo'
 import { Button } from '@/components/buttons/Button'
 import { NavItems } from '@/data/header/navItems'
@@ -23,7 +21,7 @@ export function Header() {
           <Button
             href={process.env.NEXT_PUBLIC_WHATSAPP_LINK}
             isExternalLink
-            Icon={<Phone weight="bold" />}
+            icon="Phone"
           >
             Contato
           </Button>
