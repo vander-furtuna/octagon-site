@@ -83,7 +83,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.variable} ${baiJamjuree.variable} bg-stone-900 font-sans antialiased`}
+        className={`${inter.variable} ${baiJamjuree.variable} min-h-dvh bg-stone-900 font-sans antialiased`}
       >
         {children}
       </body>
