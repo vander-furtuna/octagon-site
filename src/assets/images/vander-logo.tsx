@@ -33,8 +33,8 @@ export function VanderSuncatLogo() {
           y2="68.0344"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F28505" />
-          <stop offset="1" stop-color="#F29F05" />
+          <stop stopColor="#F28505" />
+          <stop offset="1" stopColor="#F29F05" />
         </linearGradient>
       </defs>
     </svg>

@@ -1,4 +1,4 @@
-import { NavItem } from '@/sections/banner/components/nav-item'
+import { NavItem } from '@/app/sections/banner/components/nav-item'
 import { Logo } from './logo'
 import { navItemsData } from '@/data/header/nav-items-data'
 import { Button } from './button'
