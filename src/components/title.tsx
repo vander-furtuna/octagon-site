@@ -8,26 +8,6 @@ type TitleProps = ComponentProps<'strong'>
 export function Title({ children }: TitleProps) {
   const letters = Array.from(children!.toLocaleString())
 
-  const wordAnimation = {
-    hidden: {},
-    visible: {},
-  }
-
-  const charAnimation = {
-    hidden: {
-      opacity: 0,
-      y: 64,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        type: 'spring' as const,
-      },
-    },
-  }
-
   return (
     <motion.h2 className="text-primary-300 after:bg-primary-700 font-heading relative size-fit text-center text-4xl font-bold uppercase">
       <strong className="size-fit overflow-hidden">
